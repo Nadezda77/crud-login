@@ -35,6 +35,13 @@
     "eject": "react-scripts eject",
     "postinstall": "npm run build"
     },
+  "eslintConfig": {
+    "env": {
+        "browser": true,
+        "node": true,
+        "mongo": true
+    }
+  },
   "engines": {
       "node": "8.9.1",
       "npm": "5.6.0"
