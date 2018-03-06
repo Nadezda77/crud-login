@@ -35,7 +35,6 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
           <Panel>
             <div class="panel-heading">
               <h3 class="panel-title">
@@ -69,7 +68,6 @@ class App extends Component {
                 </table>
               </div>
             </Panel>
-          </div>
           );
   }
 }

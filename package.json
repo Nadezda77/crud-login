@@ -36,5 +36,9 @@
   },
   "devDependencies": {
     "react-bootstrap": "^0.32.1"
-  }
+  },
+  "engines": {
+    "node": "8.9.1",
+    "npm": "5.6.0"
+    }
 }
