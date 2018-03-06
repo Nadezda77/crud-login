@@ -1,0 +1,18 @@
+body {
+  margin:  0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* .container {
+  width: auto;
+  margin: 20px 0;
+}
+
+.container .footer-text{
+  margin: 20px 0;
+} */
+
+.badge{
+  background-color: #e4aa48;
+}
