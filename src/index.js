@@ -20,6 +20,8 @@ ReactDOM.render(
   <Router>
       <div className="container">
         <Menu/>
+        <br/>
+        <br/>
         <Switch>
           <Route exact path='/' component={App} />
           <Route path='/login' component={Login} />

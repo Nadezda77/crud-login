@@ -49,17 +49,17 @@ class App extends Component {
                 <table class="table table-stripe">
                   <thead>
                     <tr>
-                      <th>ISBN</th>
-                      <th>Title</th>
-                      <th>Author</th>
-                      <th>Description</th>
+                      <th scope="col">ISBN</th>
+                      <th scope="col">Title</th>
+                      <th scope="col">Author</th>
+                      <th scope="col">Description</th>
                     </tr>
                   </thead>
                   <tbody>
                     {this.state.books.map(book =>
                       <tr>
-                        <td><Link to={`/show/${book._id}`}>{book.isbn}</Link></td>
-                        <td>{book.title}</td>
+                        <td>{book.isbn}</td>
+                        <td><Link to={`/show/${book._id}`}>{book.title}</Link></td>
                         <td>{book.author}</td>
                         <td>{book.description}</td>
                       </tr>
