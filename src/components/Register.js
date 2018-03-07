@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Login.css';
@@ -24,9 +24,9 @@ class Create extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { username, password } = this.state;
+    const { username, password, name } = this.state;
 
-    axios.post('/api/auth/register', { username, password })
+    axios.post('/api/auth/register', { username, password, name })
       .then((result) => {
         this.props.history.push("/login")
       });

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import {Panel} from 'react-bootstrap';
@@ -49,7 +49,7 @@ class App extends Component {
                 <table class="table table-stripe">
                   <thead>
                     <tr>
-                      <th scope="col">ISBN</th>
+                      {/* <th scope="col">ISBN</th> */}
                       <th scope="col">Title</th>
                       <th scope="col">Author</th>
                       <th scope="col">Description</th>
@@ -58,7 +58,7 @@ class App extends Component {
                   <tbody>
                     {this.state.books.map(book =>
                       <tr>
-                        <td>{book.isbn}</td>
+                        {/* <td>{book.isbn}</td> */}
                         <td><Link to={`/show/${book._id}`}>{book.title}</Link></td>
                         <td>{book.author}</td>
                         <td>{book.description}</td>
