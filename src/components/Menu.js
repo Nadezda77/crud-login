@@ -23,14 +23,21 @@ class Menu extends Component{
                         <LinkContainer to="/about">
                             <NavItem eventKey={1} >About</NavItem>
                         </LinkContainer>
-                        <NavItem eventKey={2} href="/contacts">Contact Us</NavItem>
-                        <NavItem eventKey={3} href="/gallery">Gallery</NavItem>
+                        <LinkContainer to="/contacts">
+                            <NavItem eventKey={2} >Contact Us</NavItem>
+                        </LinkContainer>
+                        <LinkContainer to="/gallery">
+                            <NavItem eventKey={3} >Gallery</NavItem>
+                        </LinkContainer>
                     </Nav>
                     <Nav pullRight>
-                        <NavItem eventKey={4} href="/cart">Cart
-                        { (this.props.cartItemsNumber > 0)?(<Badge className="badge">{this.props.cartItemsNumber}</Badge>):('')}
+                        <LinkContainer to="/cart">
+                            <NavItem eventKey={4}>Cart{ (this.props.cartItemsNumber > 0)?(<Badge className="badge">{this.props.cartItemsNumber}</Badge>):('')}
                         </NavItem>
-                        <NavItem eventKey={5} href="/login">Log in</NavItem>
+                        </LinkContainer>
+                        <LinkContainer to="/login">
+                            <NavItem eventKey={5} >Log in</NavItem>
+                        </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
