@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 import {Nav, NavItem, Navbar, Badge} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import logo from '../img/_book_logo_header.png';
 import './Menu.css';
 
@@ -10,7 +9,7 @@ class Menu extends Component{
     
     render(){
         return(
-            <Navbar inverse fixedTop>
+            <Navbar inverse fixedTop collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
                     <a href="/" target="_blank"><img src={logo} alt="Logo" /></a>
@@ -20,7 +19,7 @@ class Menu extends Component{
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem eventKey={1} componentClass={Link} href="/about" to="/about" >About</NavItem>
+                        <NavItem eventKey={1} href="/about">About</NavItem>
                         <NavItem eventKey={2} href="/contacts">Contact Us</NavItem>
                         <NavItem eventKey={3} href="/gallery">Gallery</NavItem>
                     </Nav>
