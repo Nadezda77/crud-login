@@ -22,6 +22,7 @@
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
     "react-photo-gallery": "^6.0.22",
+    "react-router-bootstrap": "^0.24.4",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "serve-favicon": "^2.4.5"
@@ -32,16 +33,16 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "postinstall": "npm run build"
-    },
+  },
   "eslintConfig": {
     "env": {
-        "browser": true,
-        "node": true,
-        "mongo": true
+      "browser": true,
+      "node": true,
+      "mongo": true
     }
   },
   "engines": {
-      "node": "8.9.1",
-      "npm": "5.6.0"
-    }
+    "node": "8.9.1",
+    "npm": "5.6.0"
+  }
 }

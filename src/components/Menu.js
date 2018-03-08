@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {Nav, NavItem, Navbar, Badge} from 'react-bootstrap';
 import logo from '../img/_book_logo_header.png';
 import './Menu.css';
+import { LinkContainer } from 'react-router-bootstrap';
 
 class Menu extends Component{
 
@@ -19,7 +20,9 @@ class Menu extends Component{
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem eventKey={1} href="/about">About</NavItem>
+                        <LinkContainer to="/about">
+                            <NavItem eventKey={1} >About</NavItem>
+                        </LinkContainer>
                         <NavItem eventKey={2} href="/contacts">Contact Us</NavItem>
                         <NavItem eventKey={3} href="/gallery">Gallery</NavItem>
                     </Nav>
