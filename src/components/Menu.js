@@ -20,7 +20,7 @@ class Menu extends Component{
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem eventKey={1} componentClass={Link} href="/about" to="/about" active={location.pathname === '/about'}>About</NavItem>
+                        <NavItem eventKey={1} componentClass={Link} href="/about" to="/about" >About</NavItem>
                         <NavItem eventKey={2} href="/contacts">Contact Us</NavItem>
                         <NavItem eventKey={3} href="/gallery">Gallery</NavItem>
                     </Nav>
