@@ -1,15 +1,15 @@
 
 import React, { Component } from 'react';
 import {Nav, NavItem, Navbar, Badge} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../img/_book_logo_header.png';
 import './Menu.css';
 
 class Menu extends Component{
-    
 
+    
     render(){
         return(
-        <div className="container">
             <Navbar inverse fixedTop>
                 <Navbar.Header>
                     <Navbar.Brand>
@@ -20,12 +20,11 @@ class Menu extends Component{
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem eventKey={1} href="/about">About</NavItem>
+                        <NavItem eventKey={1} componentClass={Link} href="/about" to="/about" active={location.pathname === '/about'}>About</NavItem>
                         <NavItem eventKey={2} href="/contacts">Contact Us</NavItem>
                         <NavItem eventKey={3} href="/gallery">Gallery</NavItem>
                     </Nav>
                     <Nav pullRight>
-                        
                         <NavItem eventKey={4} href="/cart">Cart
                         { (this.props.cartItemsNumber > 0)?(<Badge className="badge">{this.props.cartItemsNumber}</Badge>):('')}
                         </NavItem>
@@ -33,7 +32,6 @@ class Menu extends Component{
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-        </div>
         );
     }    
 }
