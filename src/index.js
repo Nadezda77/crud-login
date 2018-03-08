@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
@@ -22,7 +22,6 @@ ReactDOM.render(
         <Menu/>
         <br/>
         <br/>
-        <Switch>
           <Route exact path='/' component={App} />
           <Route path='/login' component={Login} />
           <Route path='/about' component={About} />
@@ -31,7 +30,6 @@ ReactDOM.render(
           <Route path='/edit/:id' component={Edit} />
           <Route path='/create' component={Create} />
           <Route path='/show/:id' component={Show} />
-        </Switch>
         <Footer/>
       </div>
   </Router>,

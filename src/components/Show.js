@@ -36,7 +36,6 @@ class Show extends Component {
 
   render() {
     return (
-      <Well>
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
@@ -61,7 +60,6 @@ class Show extends Component {
             <Button onClick={this.delete.bind(this, this.state.book._id)} bsStyle="danger">Delete</Button>
           </div>
         </div>
-      </Well>
     );
   }
 }
