@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { Button,  Well, } from 'react-bootstrap';
+import { Button, Panel } from 'react-bootstrap';
 
 class Show extends Component {
 
@@ -26,6 +26,11 @@ class Show extends Component {
       });
   }
 
+  logout = () => {
+    localStorage.removeItem('jwtToken');
+    window.location.reload();
+  }
+
   delete(id){
     console.log(id);
     axios.delete('/api/book/'+id)
@@ -36,10 +41,13 @@ class Show extends Component {
 
   render() {
     return (
-        <div class="panel panel-default">
+        <Panel>
           <div class="panel-heading">
             <h3 class="panel-title">
               {this.state.book.title}
+              <br/>
+              {localStorage.getItem('jwtToken') &&
+                <Button class="btn btn-primary" onClick={this.logout}>Logout</Button>}
             </h3>
           </div>
           <div class="panel-body">
@@ -59,7 +67,7 @@ class Show extends Component {
             <Link to={`/edit/${this.state.book._id}`} class="btn btn-success">Edit</Link>&nbsp;
             <Button onClick={this.delete.bind(this, this.state.book._id)} bsStyle="danger">Delete</Button>
           </div>
-        </div>
+        </Panel>
     );
   }
 }

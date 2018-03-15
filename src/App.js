@@ -1,8 +1,10 @@
+"use strict"
+
 import React, { Component } from 'react';
 //import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import {Panel} from 'react-bootstrap';
+import {Panel, Button} from 'react-bootstrap';
 
 
 class App extends Component {
@@ -40,7 +42,7 @@ class App extends Component {
               <h3 class="panel-title">
                 BOOK CATALOG &nbsp;
                 {localStorage.getItem('jwtToken') &&
-                <button class="btn btn-primary" onClick={this.logout}>Logout</button>
+                <Button class="btn btn-primary" onClick={this.logout}>Logout</Button>
               }
               </h3>
             </div>

@@ -5,9 +5,13 @@ var BookSchema = new mongoose.Schema({
     title: String,
     author: String,
     description: String,
-    published_date: { type: Date },
+    published_date: { type: Date, default: Date.now },
     publisher: String,
     updated_date: { type: Date, default: Date.now },
+    authorId: {
+      type: mongoose.Schema.ObjectId,
+      required: true
+  },
   });
 
   module.exports = mongoose.model('Book', BookSchema);
