@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './Login.css';
 import {Button} from 'react-bootstrap';
 
-class Create extends Component {
+class Register extends Component {
 
   constructor() {
     super();
@@ -51,4 +51,4 @@ class Create extends Component {
   }
 }
 
-export default Create;
+export default Register;
