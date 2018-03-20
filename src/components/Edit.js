@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import {Button, Panel} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 
 class Edit extends Component {
 
@@ -43,20 +43,13 @@ class Edit extends Component {
       });
   }
 
-  logout = () => {
-    localStorage.removeItem('jwtToken');
-    window.location.reload();
-  }
-
   render() {
     return (
-        <Panel>
+      <div class="container">
+        <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
               EDIT BOOK
-              {localStorage.getItem('jwtToken') &&
-                <Button class="btn btn-primary" onClick={this.logout}>Logout</Button>
-    }
             </h3>
           </div>
           <div class="panel-body">
@@ -89,8 +82,8 @@ class Edit extends Component {
               <Button type="submit" class="btn btn-default">Submit</Button>
             </form>
           </div>
-        </Panel>
-      
+        </div>
+      </div>
     );
   }
 }
