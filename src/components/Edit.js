@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import {Button} from 'react-bootstrap';
+import Menu from "./Menu";
 
 class Edit extends Component {
 
@@ -45,6 +46,9 @@ class Edit extends Component {
 
   render() {
     return (
+      <div>
+      <Menu/>
+      <br/>
       <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -84,6 +88,7 @@ class Edit extends Component {
           </div>
         </div>
       </div>
+    </div>
     );
   }
 }

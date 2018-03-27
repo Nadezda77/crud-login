@@ -1,5 +1,7 @@
 import React from 'react';
 import Gallery from 'react-photo-gallery';
+import Menu from "./Menu";
+
 
 const photos = [
   {
@@ -43,7 +45,11 @@ const photos = [
 class Galerija extends React.Component {
   render(){
     return(
-      <Gallery photos={photos} />
+      <div>
+        <Menu/>
+        <br/>
+        <Gallery photos={photos} />
+      </div>
     ); 
   }
 }

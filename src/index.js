@@ -19,9 +19,6 @@ import About from './components/About';
 ReactDOM.render(
   <Router>
       <div className="container">
-        <Menu/>
-        <br/>
-        <br/>
           <Route exact path='/' component={App} />
           <Route path='/login' component={Login} />
           <Route path='/about' component={About} />

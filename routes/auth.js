@@ -12,6 +12,7 @@ router.post('/register', function(req, res) {
       res.json({success: false, msg: 'Please pass username and password.'});
     } else {
       var newUser = new User({
+        _id: new  mongoose.Types.ObjectId(),
         username: req.body.username,
         password: req.body.password,
         name: req.body.name
