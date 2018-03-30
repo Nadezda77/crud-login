@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
+import Menu from "./Menu";
+
 
 
 class About extends Component {
 render() {
     return (
-        <div className="container">
-            <h1>Online shop</h1>
-
+        <div>
+            <Menu/>
             <br/>
+            <div className="container">
+                <h1>Online shop</h1>
 
-            <p>
-            Buy digital version of the book or put your own content you want to share. 
+                <br/>
+
+                <p>
+                Buy digital version of the book or put your own content you want to share. 
 
 
-            </p>
+                </p>
+            </div>
         </div>
         );
     }

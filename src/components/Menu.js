@@ -29,14 +29,16 @@ class Menu extends Component{
                         <LinkContainer to="/gallery">
                             <NavItem eventKey={3} >Gallery</NavItem>
                         </LinkContainer>
+                        <LinkContainer to="/catalog">
+                            <NavItem eventKey={4} >Catalog</NavItem>
+                        </LinkContainer>
                     </Nav>
                     <Nav pullRight>
-                        <LinkContainer to="/cart">
-                            <NavItem eventKey={4}>Cart{ (this.props.cartItemsNumber > 0)?(<Badge className="badge">{this.props.cartItemsNumber}</Badge>):('')}
-                        </NavItem>
+                        <LinkContainer to="/register">
+                        <NavItem eventKey={5} >Register</NavItem>
                         </LinkContainer>
                         <LinkContainer to="/login">
-                            <NavItem eventKey={5} >Log in</NavItem>
+                            <NavItem eventKey={6} >Log in</NavItem>
                         </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>

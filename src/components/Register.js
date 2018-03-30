@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Login.css';
-import {Button} from 'react-bootstrap';
+import {Button, Form } from 'react-bootstrap';
 
 class Register extends Component {
 
@@ -12,7 +12,8 @@ class Register extends Component {
     this.state = {
       username: '',
       password: '', 
-      name: ''
+      name: '',
+      avatar: ''
     };
   }
   onChange = (e) => {
@@ -24,18 +25,18 @@ class Register extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { username, password, name } = this.state;
+    const { username, password, name, avatar } = this.state;
 
-    axios.post('/api/auth/register', { username, password, name })
+    axios.post('/api/auth/register', { username, password, name, avatar })
       .then((result) => {
         this.props.history.push("/login")
       });
   }
 
   render() {
-    const { username, password, name } = this.state;
+    const { username, password, name, avatar } = this.state;
     return (
-      <div class="container">
+      <div className="Login">
         <form class="form-signin" onSubmit={this.onSubmit}>
           <h2 class="form-signin-heading">Register</h2>
           <label for="inputEmail" class="sr-only">Email address</label>
@@ -44,6 +45,8 @@ class Register extends Component {
           <input type="password" class="form-control" placeholder="Password" name="password" value={password} onChange={this.onChange} required/>
           <label for="inputName" class="sr-only">Name</label>
           <input type="name" class="form-control" placeholder="Name" name="name" value={name} onChange={this.onChange} required/>
+          <label for="inputAvatar" class="sr-only">Avatar</label>
+          <input type="avatar" class="avatar-holder"  name="avatar" value={avatar} onChange={this.onChange} required/>
           <Button class="btn btn-lg btn-primary btn-block" type="submit">Register</Button>
         </form>
       </div>

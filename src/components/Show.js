@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Button,  Well, } from 'react-bootstrap';
+import Menu from "./Menu";
 
 class Show extends Component {
 
@@ -36,6 +37,9 @@ class Show extends Component {
 
   render() {
     return (
+      <div>
+        <Menu/>
+        <br/>
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
@@ -60,6 +64,7 @@ class Show extends Component {
             <Button onClick={this.delete.bind(this, this.state.book._id)} bsStyle="danger">Delete</Button>
           </div>
         </div>
+      </div>
     );
   }
 }

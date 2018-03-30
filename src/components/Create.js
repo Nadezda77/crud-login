@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import {Well, Panel, FormControl, FormGroup, ControlLabel, Button} from 'react-bootstrap';
+import Menu from "./Menu";
 
 class Create extends Component {
 
@@ -26,7 +27,7 @@ class Create extends Component {
     e.preventDefault();
 
     const { isbn, title, author, description, published_year, publisher } = this.state;
-
+   
     axios.post('/api/book', { isbn, title, author, description, published_year, publisher })
       .then((result) => {
         this.props.history.push("/")
@@ -36,6 +37,9 @@ class Create extends Component {
   render() {
     const { isbn, title, author, description, published_year, publisher } = this.state;
     return (
+      <div>
+        <Menu/>
+        <br/>
       <div classname="container">
         <Panel>
           <Panel.Heading>
@@ -105,6 +109,7 @@ class Create extends Component {
             </form>
           </Panel.Body>
         </Panel>
+    </div>
     </div>
     );
   }
