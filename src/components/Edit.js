@@ -46,10 +46,9 @@ class Edit extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
       <Menu/>
       <br/>
-      <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
@@ -86,7 +85,6 @@ class Edit extends Component {
               <Button type="submit" class="btn btn-default">Submit</Button>
             </form>
           </div>
-        </div>
       </div>
     </div>
     );

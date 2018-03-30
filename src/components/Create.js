@@ -37,10 +37,9 @@ class Create extends Component {
   render() {
     const { isbn, title, author, description, published_year, publisher } = this.state;
     return (
-      <div>
+      <div classname="container">
         <Menu/>
         <br/>
-      <div classname="container">
         <Panel>
           <Panel.Heading>
             <h3 class="panel-title">
@@ -109,7 +108,6 @@ class Create extends Component {
             </form>
           </Panel.Body>
         </Panel>
-    </div>
     </div>
     );
   }

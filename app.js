@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var book = require('./routes/book');
 var auth = require('./routes/auth');
 
-
 var app = express();
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
@@ -15,19 +14,14 @@ mongoose.connect('mongodb://nadap:123456.A@ds245805.mlab.com:45805/webshop', { p
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 
-
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'build')));
 
 
-
 app.use('/api/book', book);
 app.use('/api/auth', auth);
-
-
-
 
 
 // catch 404 and forward to error handler
