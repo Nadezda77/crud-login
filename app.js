@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 
 var book = require('./routes/book');
 var auth = require('./routes/auth');
-var catalog = require('./routes/catalog'); 
+
 
 var app = express();
 var mongoose = require('mongoose');

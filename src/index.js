@@ -13,7 +13,7 @@ import Menu from './components/Menu';
 import Footer from './components/Footer';
 import Galerija from './components/Gallery';
 import About from './components/About';
-import Catalog from './components/Catalog';
+
 
 
 
@@ -24,7 +24,6 @@ ReactDOM.render(
           <Route path='/login' component={Login} />
           <Route path='/about' component={About} />
           <Route path='/register' component={Register} />
-          <Route path='/catalog' component={Catalog} />
           <Route path='/gallery' component={Galerija} />
           <Route path='/edit/:id' component={Edit} />
           <Route path='/create' component={Create} />
