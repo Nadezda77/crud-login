@@ -37,7 +37,7 @@ class Create extends Component {
   render() {
     const { isbn, title, author, description, published_year, publisher } = this.state;
     return (
-      <div classname="container">
+      <div className="container">
         <Menu/>
         <br/>
         <Panel>

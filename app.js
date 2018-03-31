@@ -6,6 +6,8 @@ var bodyParser = require('body-parser');
 
 var book = require('./routes/book');
 var auth = require('./routes/auth');
+var itemRouter = require('./routes/itemRouter');
+
 
 var app = express();
 var mongoose = require('mongoose');
@@ -21,7 +23,9 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 
 app.use('/api/book', book);
+app.use('/api/item', itemRouter);
 app.use('/api/auth', auth);
+
 
 
 // catch 404 and forward to error handler

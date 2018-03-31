@@ -23,15 +23,13 @@ class Menu extends Component{
                         <LinkContainer to="/about">
                             <NavItem eventKey={1} >About</NavItem>
                         </LinkContainer>
-                        <LinkContainer to="/contacts">
+                        {/* <LinkContainer to="/add-item">
                             <NavItem eventKey={2} >Contact Us</NavItem>
-                        </LinkContainer>
+                        </LinkContainer> */}
                         <LinkContainer to="/gallery">
                             <NavItem eventKey={3} >Gallery</NavItem>
                         </LinkContainer>
-                        <LinkContainer to="/catalog">
-                            <NavItem eventKey={4} >Catalog</NavItem>
-                        </LinkContainer>
+                        
                     </Nav>
                     <Nav pullRight>
                         <LinkContainer to="/register">
