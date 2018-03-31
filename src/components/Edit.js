@@ -46,16 +46,9 @@ class Edit extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
       <div className="container">
       <Menu/>
       <br/>
-=======
-      <div>
-      <Menu/>
-      <br/>
-      <div class="container">
->>>>>>> 0f57b77223ab343ae7a8b13d28ee06ceffb0c343
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
