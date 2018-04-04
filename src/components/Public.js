@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Button, Grid, Image, Row, Col, Jumbotron, Panel} from "react-bootstrap";
+import bgImage from '../img/books.jpg';
 import Menu from "./Menu";
 
 
@@ -6,22 +8,48 @@ import Menu from "./Menu";
 class Public extends Component {
 render() {
     return (
-        <div>
-            <Menu/>
-            <br/>
-            <div className="container">
-                <h1>Online shop</h1>
-
-                <br/>
-
-                <p>
-                Public
-
-                </p>
+            <div>   
+                <Menu/>
+                <Jumbotron style={styles.container}>
+                    <h1>Hello, world!</h1>
+                    <p>
+                        This is a simple hero unit, a simple jumbotron-style component for calling
+                        extra attention to featured content or information.
+                    </p>
+                    <p>
+                        <Button bsStyle="primary">Learn more</Button>
+                    </p>
+                </Jumbotron>
+                <Row>
+                    <Col>
+                        <Panel>
+                        <Panel.Body>Basic panel example</Panel.Body>
+                        </Panel>
+                    </Col>
+                    <Col>
+                        <Panel>
+                        <Panel.Body>Basic panel example</Panel.Body>
+                        </Panel>
+                    </Col>
+                    <Col>
+                        <Panel>
+                        <Panel.Body>Basic panel example</Panel.Body>
+                        </Panel>
+                    </Col>
+                </Row>
             </div>
-        </div>
-        );
+            )
     }
 }
 
+
+const styles = {
+    container: {
+        backgroundImage: `url(${bgImage})`,
+        color: "white"
+    }
+};
+
+
 export default Public;
+
