@@ -10,7 +10,6 @@
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "jquery": "^1.9.1",
     "jsonwebtoken": "^8.1.1",
     "jwt-decode": "^2.2.0",
     "mdbreact": "^4.2.0",
@@ -19,9 +18,9 @@
     "passport": "^0.4.0",
     "passport-jwt": "^3.0.1",
     "popper.js": "^1.12.9",
-    "react": "^16.2.0",
+    "react": "^16.3.2",
     "react-bootstrap": "^0.32.1",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.3.2",
     "react-error-overlay": "^4.0.0",
     "react-form": "^3.4.4",
     "react-photo-gallery": "^6.0.22",
@@ -30,9 +29,7 @@
     "react-scripts": "1.1.1",
     "serve-favicon": "^2.4.5"
   },
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "node ./bin/www",
     "build": "react-scripts build",
