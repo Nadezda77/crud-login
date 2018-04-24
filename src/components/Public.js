@@ -21,21 +21,7 @@ render() {
                     </p>
                 </Jumbotron>
                 <Row>
-                    <Col>
-                        <Panel>
-                        <Panel.Body>Basic panel example</Panel.Body>
-                        </Panel>
-                    </Col>
-                    <Col>
-                        <Panel>
-                        <Panel.Body>Basic panel example</Panel.Body>
-                        </Panel>
-                    </Col>
-                    <Col>
-                        <Panel>
-                        <Panel.Body>Basic panel example</Panel.Body>
-                        </Panel>
-                    </Col>
+                  
                 </Row>
             </div>
             )
